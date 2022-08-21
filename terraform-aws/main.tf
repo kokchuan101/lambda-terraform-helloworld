@@ -11,6 +11,10 @@ terraform {
   }
 
   required_version = "~> 1.0"
+
+  cloud {
+    # Stored in TF_CLOUD_ORGANIZATION and TF_WORKSPACE
+  }
 }
 
 provider "aws" {

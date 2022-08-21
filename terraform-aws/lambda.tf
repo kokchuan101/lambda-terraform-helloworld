@@ -1,8 +1,11 @@
 data "archive_file" "hello-world-terraform-aws" {
-  type = "zip"
-
-  source_dir  = "../${path.module}/hello-world"
+  type        = "zip"
   output_path = "${path.module}/hello-world-terraform-aws.zip"
+
+  source {
+    content  = "hello"
+    filename = "dummy.txt"
+  }
 }
 
 resource "aws_lambda_function" "hello_world" {
