@@ -5,12 +5,23 @@ on:
     branches:
       - main
   pull_request:
+  issue_comment:
+    types: [created]
 
 jobs:
   terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
     steps:
+      - uses: khan/pull-request-comment-trigger@v1.1.0
+        id: check
+        with:
+          trigger: "/terraform"
+          reaction: rocket
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - run: "echo Found it!"
+        if: steps.check.outputs.triggered == 'true'
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Terraform
