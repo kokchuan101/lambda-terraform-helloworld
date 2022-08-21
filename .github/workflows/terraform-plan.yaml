@@ -2,12 +2,6 @@ name: "Terraform Plan"
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-  pull_request:
-  issue_comment:
-    types: [created]
 
 env:
   TF_CLOUD_ORGANIZATION: ${{ secrets.TF_CLOUD_ORGANIZATION}}
