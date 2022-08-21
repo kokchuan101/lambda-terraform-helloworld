@@ -61,7 +61,7 @@ cp auto.tfvars.example auto.tfvars
 terraform init
 ```
 
-5. Verify lambda resources that will be created
+5. Verify lambda resources that will be running
 ```
 terraform plan
 ```
