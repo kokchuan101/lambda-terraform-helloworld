@@ -18,13 +18,14 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: |
-          cd hello-world
           npm install
           zip -r hello-world-terraform-aws.zip ./ -x "tests/*"
+        working-directory: hello-world
       - name: Deploy Lambda function to AWS
         run: |
           aws lambda update-function-code --function-name HelloWorld --zip-file fileb://hello-world-terraform-aws.zip
           aws lambda update-function-code --function-name ByeWorld --zip-file fileb://hello-world-terraform-aws.zip
+        working-directory: hello-world
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
