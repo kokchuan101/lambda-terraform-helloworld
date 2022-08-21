@@ -20,8 +20,7 @@ jobs:
         run: |
           cd hello-world
           npm install
-          cd ..
-          zip -r hello-world-terraform-aws.zip hello-world/ -x "hello-world/tests/*"
+          zip -r hello-world-terraform-aws.zip ./ -x "tests/*"
       - name: Deploy Lambda function to AWS
         run: |
           aws lambda update-function-code --function-name HelloWorld --zip-file fileb://hello-world-terraform-aws.zip
