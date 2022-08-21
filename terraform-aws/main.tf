@@ -11,6 +11,14 @@ terraform {
   }
 
   required_version = "~> 1.0"
+
+  cloud {
+    organization = "chuanfrost98"
+
+    workspaces {
+      name = "gh-actions-demo"
+    }
+  }
 }
 
 #change 1
