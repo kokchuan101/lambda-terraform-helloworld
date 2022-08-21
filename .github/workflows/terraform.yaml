@@ -33,8 +33,8 @@ jobs:
         run: |
           export TF_CLOUD_ORGANIZATION=${{ secrets.TF_CLOUD_ORGANIZATION}}
           export TF_WORKSPACE=${{ secrets.TF_WORKSPACE}}
-          echo TF_CLOUD_ORGANIZATION
-          echo TF_WORKSPACE
+          echo $TF_CLOUD_ORGANIZATION
+          echo $TF_WORKSPACE
       - name: Terraform Format
         id: fmt
         run: terraform fmt -check
