@@ -1,7 +1,7 @@
 data "archive_file" "hello-world-terraform-aws" {
   type = "zip"
 
-  source_dir  = "../${path.module}/hello-world"
+  source_dir  = "${path.module}/../hello-world"
   output_path = "${path.module}/hello-world-terraform-aws.zip"
 }
 
