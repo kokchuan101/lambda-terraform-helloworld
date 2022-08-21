@@ -4,9 +4,9 @@ This is a simple lambda project to:
 
 - setup Terraform for lambda function instead of using AWS SAM CLI
 - experiment applying Terraform in local machine using localstack
-- create Github Action to orchestrate lambda resource in AWS and CI/CD pipeline to deploy lambda function
+- create Github Action to orchestrate lambda resource in AWS and create CI/CD pipeline to deploy lambda function
 
-Description below will cover AWS SAM CLI and Terraform implementation for both local testing.
+Description below will cover AWS SAM CLI and Terraform implementation for both local testing and deployment.
 
 ---
 
