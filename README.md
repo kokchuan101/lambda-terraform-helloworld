@@ -77,7 +77,7 @@ terraform apply
 
 ![Alt text](images/terraform-output.png)
 
-For example go to http://localhost:4566/restapis/r37nr953pa/prod/\_user_request\_/hello
+For example go to http://localhost:4566/restapis/r37nr953pa/prod/_user_request_/hello
 
 ## Deployment
 
