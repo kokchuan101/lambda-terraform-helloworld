@@ -44,7 +44,7 @@ sam local start-api --debug
 localstack start
 ```
 
-2. Ensure localstack container is created
+2. Ensure localstack container is running
 ```
 docker ps
 ```
@@ -61,7 +61,7 @@ cp auto.tfvars.example auto.tfvars
 terraform init
 ```
 
-5. Verify lambda resources that will be running
+5. Verify lambda resources that will be created
 ```
 terraform plan
 ```
