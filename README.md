@@ -97,3 +97,4 @@ Github Actions setup includes [terraform plan](.github/workflows/terraform-plan.
 - https://learn.hashicorp.com/tutorials/terraform/lambda-api-gateway?in=terraform/aws
 - https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/custom-service-endpoints#localstack
+
